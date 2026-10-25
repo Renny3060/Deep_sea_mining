@@ -1,0 +1,194 @@
+/* ── Deep Sea Mining — Folha de estilos ──────────────────────── */
+
+.root {
+    -fx-base:                      #0a1628;
+    -fx-background:                #0a1628;
+    -fx-control-inner-background:  #112240;
+    -fx-text-fill:                 #c8d8e8;
+    -fx-font-family:               "Segoe UI", "SF Pro Text", sans-serif;
+    -fx-font-size:                 13px;
+}
+
+/* ── MenuBar ─────────────────────────────────────────────────── */
+.menu-bar {
+    -fx-background-color: #060f1f;
+    -fx-border-color:     #1a3d5c;
+    -fx-border-width:     0 0 1 0;
+    -fx-padding:          2 8 2 8;
+}
+.menu-bar .menu .label { -fx-text-fill: #9ab8d4; }
+.menu-bar .menu:hover,
+.menu-bar .menu:showing {
+    -fx-background-color:  #1a3d5c;
+    -fx-background-radius: 4;
+}
+.context-menu {
+    -fx-background-color:  #0d1f35;
+    -fx-border-color:      #1a3d5c;
+    -fx-border-width:      1;
+    -fx-border-radius:     4;
+    -fx-background-radius: 4;
+    -fx-padding:           4;
+}
+.menu-item:hover, .menu-item:focused {
+    -fx-background-color:  #1a3d5c;
+    -fx-background-radius: 3;
+}
+.menu-item .label { -fx-text-fill: #c8d8e8; }
+
+/* ── Painéis laterais ────────────────────────────────────────── */
+.side-panel {
+    -fx-background-color: #080f1e;
+    -fx-border-color:     transparent #1a3d5c transparent transparent;
+    -fx-border-width:     0 1 0 0;
+}
+
+/* ── Labels genéricas dos painéis ────────────────────────────── */
+.panel-title {
+    -fx-text-fill:      #4ab8e8;
+    -fx-font-size:      11px;
+    -fx-font-weight:    bold;
+    -fx-letter-spacing: 1.8;
+}
+.panel-state {
+    -fx-text-fill:   #4aebd4;
+    -fx-font-size:   16px;
+    -fx-font-weight: bold;
+}
+.panel-label {
+    -fx-text-fill: #6a8aa8;
+    -fx-font-size: 11px;
+}
+.panel-value {
+    -fx-text-fill:   #c8d8e8;
+    -fx-font-size:   15px;
+    -fx-font-weight: bold;
+}
+.panel-value-small {
+    -fx-text-fill: #9ab8d4;
+    -fx-font-size: 11px;
+}
+
+/* ── Barras de progresso (combustível / casco) ───────────────── */
+.fuel-bar {
+    -fx-control-inner-background: #1a3050;
+    -fx-background-radius:        3;
+    -fx-border-radius:            3;
+}
+.fuel-bar.fuel-ok  { -fx-accent: #4aebd4; }
+.fuel-bar.fuel-mid { -fx-accent: #f4c44a; }
+.fuel-bar.fuel-low { -fx-accent: #e85d3c; }
+.fuel-bar > .bar   { -fx-background-insets: 0; -fx-background-radius: 3; }
+.fuel-bar > .track { -fx-background-insets: 0; -fx-background-radius: 3; -fx-background-color: #1a3050; }
+
+/* ── Separadores ─────────────────────────────────────────────── */
+.separator .line {
+    -fx-border-color:  #1a3d5c;
+    -fx-border-width:  1 0 0 0;
+}
+
+/* ── Botões genéricos ────────────────────────────────────────── */
+.button {
+    -fx-background-color:  #1a3d5c;
+    -fx-text-fill:         #c8d8e8;
+    -fx-border-color:      #2a5a7c;
+    -fx-border-width:      1;
+    -fx-border-radius:     4;
+    -fx-background-radius: 4;
+    -fx-cursor:            hand;
+    -fx-padding:           5 12 5 12;
+}
+.button:hover    { -fx-background-color: #2a5a7c; }
+.button:pressed  { -fx-background-color: #0d2a40; -fx-scale-x: 0.98; -fx-scale-y: 0.98; }
+.button:disabled { -fx-opacity: 0.35; }
+
+/* ── WorkshopPanel: botões de seleção de drone ───────────────── */
+.drone-btn {
+    -fx-background-color:  #0d2a40;
+    -fx-text-fill:         #9ab8d4;
+    -fx-border-color:      #2a5a7c;
+    -fx-border-width:      1;
+    -fx-border-radius:     4;
+    -fx-background-radius: 4;
+    -fx-cursor:            hand;
+    -fx-font-size:         12px;
+    -fx-font-weight:       bold;
+    -fx-padding:           5 8 5 8;
+}
+.drone-btn:selected {
+    -fx-background-color:  #1a3d5c;
+    -fx-text-fill:         #4aebd4;
+    -fx-border-color:      #4aebd4;
+}
+.drone-btn:hover:not(:disabled) { -fx-background-color: #1a3050; }
+.drone-btn:disabled { -fx-opacity: 0.35; }
+
+/* ── WorkshopPanel: botão Lançar Drone ───────────────────────── */
+.launch-btn {
+    -fx-background-color:  #0d3320;
+    -fx-text-fill:         #7eff7e;
+    -fx-border-color:      #7eff7e;
+    -fx-border-width:      1.5;
+    -fx-border-radius:     5;
+    -fx-background-radius: 5;
+    -fx-font-size:         13px;
+    -fx-font-weight:       bold;
+    -fx-cursor:            hand;
+    -fx-padding:           8 12 8 12;
+}
+.launch-btn:hover    { -fx-background-color: #174d2a; }
+.launch-btn:pressed  { -fx-background-color: #0a2216; -fx-scale-x: 0.98; -fx-scale-y: 0.98; }
+.launch-btn:disabled {
+    -fx-background-color: #101a10;
+    -fx-text-fill:        #3a5a3a;
+    -fx-border-color:     #3a5a3a;
+    -fx-opacity:          0.55;
+}
+
+/* ── WorkshopPanel: Spinner ──────────────────────────────────── */
+.workshop-spinner .text-field {
+    -fx-background-color:  #112240;
+    -fx-text-fill:         #c8d8e8;
+    -fx-border-color:      #2a5a7c;
+    -fx-border-width:      1;
+    -fx-border-radius:     4 0 0 4;
+    -fx-background-radius: 4 0 0 4;
+    -fx-padding:           4 8 4 8;
+}
+.workshop-spinner .increment-arrow-button,
+.workshop-spinner .decrement-arrow-button {
+    -fx-background-color:  #1a3d5c;
+    -fx-border-color:      #2a5a7c;
+    -fx-cursor:            hand;
+}
+.workshop-spinner .increment-arrow-button:hover,
+.workshop-spinner .decrement-arrow-button:hover {
+    -fx-background-color: #2a5a7c;
+}
+.workshop-spinner .increment-arrow,
+.workshop-spinner .decrement-arrow {
+    -fx-background-color: #c8d8e8;
+}
+
+/* ── ScrollPane e TextArea (LogStage — Pessoa B) ─────────────── */
+.scroll-pane                  { -fx-background-color: transparent; }
+.scroll-pane > .viewport      { -fx-background-color: #080f1e; }
+.scroll-bar:vertical .thumb   { -fx-background-color: #2a5a7c; -fx-background-radius: 3; }
+.scroll-bar:horizontal .thumb { -fx-background-color: #2a5a7c; -fx-background-radius: 3; }
+.scroll-bar                   { -fx-background-color: #060f1f; }
+
+.text-area {
+    -fx-background-color:         #080f1e;
+    -fx-text-fill:                #9ab8d4;
+    -fx-font-family:              "Courier New", monospace;
+    -fx-font-size:                11px;
+    -fx-control-inner-background: #080f1e;
+    -fx-border-color:             #1a3d5c;
+    -fx-border-width:             1;
+}
+.text-area .content { -fx-background-color: #080f1e; }
+
+/* ── Dialogs ─────────────────────────────────────────────────── */
+.dialog-pane                { -fx-background-color: #0d1f35; }
+.dialog-pane .content.label { -fx-text-fill: #c8d8e8; }
+.dialog-pane .header-panel  { -fx-background-color: #061624; }
